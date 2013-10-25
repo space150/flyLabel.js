@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  </head>
+  <body>
+    <form action="" class="flabel__form">
+      <div class="flabel__group">
+        <label for="name" class="flabel__label">Name</label>
+        <input type="text" id="name" name="name" class="flabel__input" placeholder="Name">
+      </div>
+      <div class="flabel__group">
+        <label for="email" class="flabel__label">Email</label>
+        <input type="text" id="email" name="email" class="flabel__input" placeholder="Email">
+      </div>
+      <div class="flabel__group">
+        <label for="hair" class="flabel__label">Hair?</label>
+        <input type="text" id="hair" name="hair" class="flabel__input" placeholder="Hair?">
+      </div>
+      <div class="flabel__group">
+        <label for="hair" class="flabel__label">Feelings</label>
+        <textarea id="hair" name="feelings" class="flabel__input" placeholder="Feelings"></textarea>
+      </div>
+      <input type="hidden" name="postback" value="true">
+      <input type="submit">
+    </form>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="floatLabel.js"></script>
+    <script>
+      if (Modernizr.input.placeholder) {
+        $('.flabel__form').floatLabels();
+      }
+    </script>
+  </body>
+</html>

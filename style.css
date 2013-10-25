@@ -1,0 +1,62 @@
+* { box-sizing: border-box; }
+
+body {
+  background: #eee;
+  font-family: Helvetica;
+}
+.flabel__form {
+  margin: 1em auto;
+  padding: 1em;
+  width: 20em;
+
+  background: #f7f7f7;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  border-bottom-color: #dedede;
+  border-right-color: #dedede;
+  box-shadow: 0 53px 68px -23px rgba(0, 0, 0, 0.1);
+}
+label,
+input {
+  display: block;
+}
+label {
+  margin-bottom: .5em;
+}
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 1em;
+  font-size: 1.2em;
+  border: 1px solid #ddd;
+  padding: 1em;
+}
+input:focus,
+textarea:focus {
+  outline: 3px solid blue;
+}
+input[type=submit] {
+  color: white;
+  margin-bottom: 0;
+}
+.flabel__group {
+  position: relative;
+  padding-top: 2em;
+}
+.flabel__label {
+  font-size: .9em;
+  text-transform: uppercase;
+  transition: all .2s ease;
+  position: absolute;
+  top: 3em;
+  left: 0;
+  opacity: 0;
+}
+.flabel__label--active {
+  top: .7em;
+  opacity: 1;
+  color: #333;
+}
+.flabel__label--focus{
+  color: blue;
+}
