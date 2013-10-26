@@ -26,10 +26,10 @@ label {
 input,
 textarea {
   width: 100%;
-  margin-bottom: 1em;
+  margin-bottom: .2em;
   font-size: 1.2em;
   border: 1px solid #ddd;
-  padding: 1em;
+  padding: .2em .4em;
 }
 input:focus,
 textarea:focus {
@@ -41,7 +41,7 @@ input[type=submit] {
 }
 .flabel__group {
   position: relative;
-  padding-top: 2em;
+  padding-top: 1.7em;
 }
 .flabel__label {
   font-size: .9em;
