@@ -6,7 +6,7 @@
   var FloatLabel;
 
   FloatLabel = (function () {
-    function FloatLabel(el, options) {
+    function _FloatLabel(el, options) {
       // Set things
       this.el = el;
       this.options = options;
@@ -17,7 +17,7 @@
       this._bindEvents();
     }
 
-    FloatLabel.prototype = {
+    _FloatLabel.prototype = {
       _findInput: function () {
         return $(this.el).find('input, textarea');
       },
@@ -46,13 +46,13 @@
         return false; // Don't bubble
       }
     };
-    return FloatLabel;
+    return _FloatLabel;
   }());
 
   $.fn.floatLabels = function (options) {
     options = options || {};
-    this.find('.flabel__group').each(function (i, group) {
-      console.log('->', new FloatLabel(group, options));
+    this.find('.flabel__group').each(function () {
+      return new FloatLabel(this, options);
     });
   };
 
