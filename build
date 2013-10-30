@@ -1,5 +1,0 @@
-#!/bin/sh
-
-uglifyjs src/main.js \
-    -o dist/floatLabel.min.js \
-    -c -m
