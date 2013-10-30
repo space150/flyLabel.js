@@ -196,9 +196,6 @@ input[type=submit] {
   font-size: 1.7em;
   font-weight: 100;
   text-transform: uppercase;
-  border-top: 2px solid orange;
-  display: inline-block;
-  padding-top: .1em;
 }
 .flabel__group {
   position: relative;
