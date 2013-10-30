@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" value="width=device-width">
+    <link rel="stylesheet" href="/demo/reset.css">
+    <link rel="stylesheet" href="/demo/style.css">
+    <script src="/demo/vendor/modernizr.min.js"></script>
+    <style>
+      <%= styles %>
+    </style>
+  </head>
+  <body id="top">
+    <a href="https://github.com/athaeryn/floatLabel" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <div class="container">
+      <div class="container--inner">
+        <section class="intro">
+          <h1 class="intro__heading">FloatLabel.js</h1>
+          <p>This is the <a href="https://github.com/athaeryn/floatLabel">FloatLabel.js</a> demo. The CSS defines the behavior
+            of the labels. Behaviors authored by Mike Anderson unless
+            otherwise stated.
+          </p>
+        </section>
+        <%
+          labels = %w{
+            First\ Name
+            Last\ Name
+            Email\ Address
+            Serial\ Number
+            Favorite\ Color
+            Favorite\ Power\ Ranger
+            Destroy\ all\ humans?
+            Your\ Quest
+          }
+          @behaviors.each_with_index do |behavior, index|
+            label = labels.shuffle!.pop || 'Email Address'
+        %>
+          <section class="demo-section column-wrapper cf">
+            <div class="behavior-demo column--left">
+              <h1 class="behavior-demo__heading"><%= behavior.name %></h1>
+              <div class="flabel__group">
+                <label for="<%= behavior.name %>" class="flabel__label flabel__label--<%= behavior.name %>"><%= label %></label>
+                <input type="text" name="<%= behavior.name %>" class="flabel__input" placeholder="<%= label %>">
+              </div>
+            </div>
+            <div class="behavior-code column--right <%= 'behavior-code--odd' if index % 2 == 0 %>">
+              <%= behavior.styles %>
+            </div>
+          </section>
+        <% end %>
+        <footer>
+          <a href="#top" class="top-link">top</a> | <a href="https://github.com/athaeryn/floatLabel">on github</a>
+        </footer>
+      </div>
+    </div>
+    <script src="/demo/vendor/jquery.min.js"></script>
+    <script src="/dist/floatLabel.min.js"></script>
+    <script>
+      if (Modernizr.input.placeholder) {
+        $('body').floatLabels();
+      }
+    </script>
+  </body>
+</html>
