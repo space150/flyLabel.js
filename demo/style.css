@@ -1,21 +1,94 @@
-* { box-sizing: border-box; }
+/*------------------------------------*\
+   Table of Contents:
+     _GLOBAL
+     _INTRO
+     _INPUTS
+     _COLUMNS
+\*------------------------------------*/
 
+/*------------------------------------*\
+  _GLOBAL
+\*------------------------------------*/
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
 body {
   background: #eee;
   font-family: Helvetica;
 }
-.flabel__form {
-  margin: 1em auto;
-  padding: 1em;
-  width: 20em;
-
-  background: #f7f7f7;
-  border: 1px solid #fff;
-  border-radius: 5px;
-  border-bottom-color: #dedede;
-  border-right-color: #dedede;
-  box-shadow: 0 53px 68px -23px rgba(0, 0, 0, 0.1);
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
 }
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+.container {
+  overflow: hidden;
+}
+.container--inner {
+  width: 90%;
+  max-width: 960px;
+
+  margin: 0 auto;
+}
+footer {
+  display: none;
+  text-align: center;
+  margin-bottom: 1em;
+}
+@media all and (max-width: 480px) {
+  footer {
+    display: block;
+  }
+  .github-ribbon {
+    display: none;
+  }
+}
+
+
+
+/*------------------------------------*\
+   _INTRO
+\*------------------------------------*/
+.intro {
+  padding: 2em 1em;
+  width: 50%;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+.intro__heading {
+  font-size: 3em;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 960px) {
+  .intro {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .intro__heading {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .intro {
+    width: 100%;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+   _INPUTS
+\*------------------------------------*/
 label,
 input {
   display: block;
@@ -23,40 +96,121 @@ input {
 label {
   margin-bottom: .5em;
 }
-input,
-textarea {
+input {
   width: 100%;
+  max-width: 20em;
   margin-bottom: .2em;
-  font-size: 1.2em;
-  border: 1px solid #ddd;
+  font-size: 1em;
+  border: 3px solid #ddd;
   padding: .2em .4em;
 }
-input:focus,
-textarea:focus {
-  outline: 3px solid blue;
+input:focus {
+  outline: 3px solid orange;
 }
 input[type=submit] {
   color: white;
   margin-bottom: 0;
 }
+@media all and (max-width: 480px) {
+  input {
+    max-width: none;
+  }
+}
+
+
+
+/*------------------------------------*\
+   _COLUMNS
+\*------------------------------------*/
+.column-wrapper {
+  display: table;
+  width: 100%;
+}
+.column--left,
+.column--right {
+  width: 50%;
+}
+.column--left {
+  float: left;
+}
+.column--right {
+  float: right;
+}
+@media all and (max-width: 768px) {
+  .column--left,
+  .column--right {
+    width: 100%;
+  }
+}
+
+
+
+.behavior-code {
+  padding: 1.5em 1em;
+  min-height: 7em;
+
+  background: #333;
+  color: white;
+
+  font-family: Consolas, monaco, monospace;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+.behavior-code--odd {
+  background: #222;
+}
+.highlight {
+  font-size: 0.9em;
+  overflow-x: scroll;
+}
+@media screen and (max-width: 960px) {
+  .highlight {
+    font-size: 0.7em
+  }
+}
+@media screen and (max-width: 768px) {
+  .column-wrapper {
+    display: block;
+  }
+  .behavior-code,
+  .behavior-code--odd {
+    background: 0;
+    padding-top: 0;
+  }
+  .highlight {
+    background: #333;
+    padding: 1em;
+  }
+  .demo-section {
+    margin-bottom: 4em;
+  }
+}
+
+.behavior-demo {
+  padding: 1em;
+  padding-top: 0;
+}
+.behavior-demo__heading {
+  font-size: 1.7em;
+  font-weight: 100;
+  text-transform: uppercase;
+  border-top: 2px solid orange;
+  display: inline-block;
+  padding-top: .1em;
+}
 .flabel__group {
   position: relative;
-  padding-top: 1.7em;
+  padding-top: 2em;
 }
 .flabel__label {
   font-size: .9em;
   text-transform: uppercase;
-  transition: all .2s ease;
   position: absolute;
-  top: 3em;
-  left: 0;
-  opacity: 0;
+  transition: all .2s ease;
+  top: 1em;
 }
-.flabel__label--active {
-  top: .7em;
-  opacity: 1;
-  color: #333;
-}
-.flabel__label--focus{
-  color: blue;
+.flabel__label--focus {
+  color: orange;
 }

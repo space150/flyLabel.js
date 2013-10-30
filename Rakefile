@@ -4,13 +4,14 @@ namespace :js do
     desc "Build files for distribution."
     task :build do
         cd PROJECT_ROOT
-        sh "uglifyjs src/main.js -o dist/floatLabel.js -c -m"
+        sh "uglifyjs src/main.js -o dist/floatLabel.min.js"
     end
 end
 
 namespace :demo do
     desc "Build the demo"
     task :build do
-        puts "TODO: build the demo"
+        cd PROJECT_ROOT
+        sh "demo/build > index.html"
     end
 end

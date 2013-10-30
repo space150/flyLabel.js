@@ -1,0 +1,8 @@
+.flabel__label--from-right {
+  left: 5em;
+  opacity: 0;
+}
+.flabel__label--from-right.flabel__label--active {
+  left: 0%;
+  opacity: 1;
+}
