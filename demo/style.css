@@ -17,6 +17,9 @@ body {
   background: #eee;
   font-family: Helvetica;
 }
+em {
+  font-style: italic;
+}
 .cf:before,
 .cf:after {
   content: " ";

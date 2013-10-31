@@ -5,7 +5,7 @@
 Inspired by [Matt Smith's float label
 concept](http://mattdsmith.com/float-label-pattern/).
 
-It's not the goal of this plugin to look like the FloatLabel concept. 
+It's not the goal of this plugin to look like the FloatLabel concept.
 In fact, the goal is not to look like anything at all. The style,
 transitions, and animations are all determined by CSS. There are several
 examples in the [demo](http://athaeryn.github.io/flyLabel.js).
@@ -61,7 +61,9 @@ probably still worth a read.
         $ $EDITOR demo/behaviors/new-behavior-name.css
 
     Use one of the existing files as a guide, and check `demo/style.css` for
-    any styles that are applied to all of the labels.
+    any styles that are applied to all of the labels. Add a line at the top of
+    your new behavior's file with your name and GitHub username, e.g.
+    `/* by Mike Anderson - athaeryn */`
 
 5. Submit a Pull Request
 
@@ -69,7 +71,7 @@ probably still worth a read.
 
 These people were tremendously helpful in the creation of this plugin:
 
-- [@audionerd](https://github.com/audionerd)
-- [@wfendler](https://github.com/wfendler)
-- [@mckennedy](https://github.com/mckennedy)
-- [@tjdunklee](https://github.com/tjdunklee)
+- [audionerd](https://github.com/audionerd)
+- [wfendler](https://github.com/wfendler)
+- [mckennedy](https://github.com/mckennedy)
+- [tjdunklee](https://github.com/tjdunklee)
