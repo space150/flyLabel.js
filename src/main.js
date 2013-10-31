@@ -39,10 +39,12 @@
       },
       _onFocus: function () {
         this.label.addClass('flabel__label--focus');
+        this._onKeyUp();
         return false; // Don't bubble
       },
       _onBlur: function () {
         this.label.removeClass('flabel__label--focus');
+        this._onKeyUp();
         return false; // Don't bubble
       }
     };
