@@ -1,12 +1,14 @@
-# flyLabel - [DEMO](http://athaeryn.github.com/flyLabel.js)
+# flyLabel.js - [DEMO](http://athaeryn.github.com/flyLabel.js)
+
+### _Your labels wish they were this fly_
 
 Inspired by [Matt Smith's float label
 concept](http://mattdsmith.com/float-label-pattern/).
 
-It's not the goal of this plugin to look like the original concept. In fact, the
-goal is not to look like anything at all. The style, transitions, and
-animations are all determined by CSS. There are several examples in the
-[demo](http://athaeryn.github.io/flyLabel.js).
+It's not the goal of this plugin to look like the FloatLabel concept. 
+In fact, the goal is not to look like anything at all. The style,
+transitions, and animations are all determined by CSS. There are several
+examples in the [demo](http://athaeryn.github.io/flyLabel.js).
 
 ## Get it
 
