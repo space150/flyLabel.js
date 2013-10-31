@@ -1,8 +1,8 @@
-.flabel__label--classic {
+.fly__label--classic {
   opacity: 0;
   top: 2em;
 }
-.flabel__label--classic.flabel__label--active {
+.fly__label--classic.fly__label--active {
   opacity: 1;
   top: 1em;
 }

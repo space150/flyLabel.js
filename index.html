@@ -65,15 +65,15 @@
 .vc { color: #f8f8f2 } /* Name.Variable.Class */
 .vg { color: #f8f8f2 } /* Name.Variable.Global */
 .vi { color: #f8f8f2 } /* Name.Variable.Instance */
-.il { color: #ae81ff } /* Literal.Number.Integer.Long */.flabel__label--classic {
+.il { color: #ae81ff } /* Literal.Number.Integer.Long */.fly__label--classic {
   opacity: 0;
   top: 2em;
 }
-.flabel__label--classic.flabel__label--active {
+.fly__label--classic.fly__label--active {
   opacity: 1;
   top: 1em;
 }
-.flabel__label--drop {
+.fly__label--drop {
   opacity: 0;
   text-shadow: 0 0 25px orange;
   -webkit-transform: scale(11);
@@ -82,7 +82,7 @@
   transform:         scale(11);
   z-index: -1;
 }
-.flabel__label--drop.flabel__label--active {
+.fly__label--drop.fly__label--active {
   opacity: 1;
   text-shadow: 0 0 0px orange;
   -webkit-transform: scale(1);
@@ -91,11 +91,11 @@
   transform:         scale(1);
   z-index: 1;
 }
-.flabel__label--from-right {
+.fly__label--from-right {
   left: 5em;
   opacity: 0;
 }
-.flabel__label--from-right.flabel__label--active {
+.fly__label--from-right.fly__label--active {
   left: 0%;
   opacity: 1;
 }
@@ -103,31 +103,32 @@
     </style>
   </head>
   <body id="top">
-    <a href="https://github.com/athaeryn/floatLabel" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/athaeryn/flyLabel.js" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     <div class="container">
       <div class="container--inner">
         <section class="intro">
-          <h1 class="intro__heading">FloatLabel.js</h1>
-          <p>This is the <a href="https://github.com/athaeryn/floatLabel">FloatLabel.js</a> demo. The CSS defines the behavior
-            of the labels. Behaviors authored by Mike Anderson unless
-            otherwise stated.
+          <h1 class="intro__heading">flyLabel.js</h1>
+          <p>
+            This is the <a href="https://github.com/athaeryn/flyLabel.js">flyLabel.js</a>
+            demo. The CSS defines the behavior of the labels. Behaviors
+            authored by Mike Anderson unless otherwise stated.
           </p>
         </section>
         
           <section class="demo-section column-wrapper cf">
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">classic</h1>
-              <div class="flabel__group">
-                <label for="classic" class="flabel__label flabel__label--classic">Your Quest</label>
-                <input type="text" name="classic" class="flabel__input" placeholder="Your Quest">
+              <div class="fly__group">
+                <label for="classic" class="fly__label fly__label--classic">Your Quest</label>
+                <input type="text" name="classic" class="fly__input" placeholder="Your Quest">
               </div>
             </div>
             <div class="behavior-code column--right behavior-code--odd">
-              <div class="highlight"><pre><span class="nc">.flabel__label--classic</span> <span class="p">{</span>
+              <div class="highlight"><pre><span class="nc">.fly__label--classic</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="k">top</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.flabel__label--classic.flabel__label--active</span> <span class="p">{</span>
+<span class="nc">.fly__label--classic.fly__label--active</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
   <span class="k">top</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
 <span class="p">}</span>
@@ -138,13 +139,13 @@
           <section class="demo-section column-wrapper cf">
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">drop</h1>
-              <div class="flabel__group">
-                <label for="drop" class="flabel__label flabel__label--drop">Last Name</label>
-                <input type="text" name="drop" class="flabel__input" placeholder="Last Name">
+              <div class="fly__group">
+                <label for="drop" class="fly__label fly__label--drop">Serial Number</label>
+                <input type="text" name="drop" class="fly__input" placeholder="Serial Number">
               </div>
             </div>
             <div class="behavior-code column--right ">
-              <div class="highlight"><pre><span class="nc">.flabel__label--drop</span> <span class="p">{</span>
+              <div class="highlight"><pre><span class="nc">.fly__label--drop</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">25px</span> <span class="nb">orange</span><span class="p">;</span>
   <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
@@ -153,7 +154,7 @@
   <span class="n">transform</span><span class="o">:</span>         <span class="n">scale</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
   <span class="k">z-index</span><span class="o">:</span> <span class="m">-1</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.flabel__label--drop.flabel__label--active</span> <span class="p">{</span>
+<span class="nc">.fly__label--drop.fly__label--active</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
   <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0px</span> <span class="nb">orange</span><span class="p">;</span>
   <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
@@ -169,17 +170,17 @@
           <section class="demo-section column-wrapper cf">
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">from-right</h1>
-              <div class="flabel__group">
-                <label for="from-right" class="flabel__label flabel__label--from-right">Destroy all humans?</label>
-                <input type="text" name="from-right" class="flabel__input" placeholder="Destroy all humans?">
+              <div class="fly__group">
+                <label for="from-right" class="fly__label fly__label--from-right">First Name</label>
+                <input type="text" name="from-right" class="fly__input" placeholder="First Name">
               </div>
             </div>
             <div class="behavior-code column--right behavior-code--odd">
-              <div class="highlight"><pre><span class="nc">.flabel__label--from-right</span> <span class="p">{</span>
+              <div class="highlight"><pre><span class="nc">.fly__label--from-right</span> <span class="p">{</span>
   <span class="k">left</span><span class="o">:</span> <span class="m">5em</span><span class="p">;</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.flabel__label--from-right.flabel__label--active</span> <span class="p">{</span>
+<span class="nc">.fly__label--from-right.fly__label--active</span> <span class="p">{</span>
   <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
@@ -188,15 +189,15 @@
           </section>
         
         <footer>
-          <a href="#top" class="top-link">top</a> | <a href="https://github.com/athaeryn/floatLabel">on github</a>
+          <a href="#top" class="top-link">top</a> | <a href="https://github.com/athaeryn/flyLabel.js">on github</a>
         </footer>
       </div>
     </div>
     <script src="demo/vendor/jquery.min.js"></script>
-    <script src="dist/floatLabel.min.js"></script>
+    <script src="dist/flyLabel.min.js"></script>
     <script>
       if (Modernizr.input.placeholder) {
-        $('body').floatLabels();
+        $('body').flyLabels();
       }
     </script>
   </body>

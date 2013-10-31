@@ -197,17 +197,17 @@ input[type=submit] {
   font-weight: 100;
   text-transform: uppercase;
 }
-.flabel__group {
+.fly__group {
   position: relative;
   padding-top: 2em;
 }
-.flabel__label {
+.fly__label {
   font-size: .9em;
   text-transform: uppercase;
   position: absolute;
   transition: all .2s ease;
   top: 1em;
 }
-.flabel__label--focus {
+.fly__label--focus {
   color: orange;
 }
