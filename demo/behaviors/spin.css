@@ -1,0 +1,14 @@
+.fly__label--spin {
+  opacity: 0;
+}
+.fly__label--spin > span {
+  transition: all .5s ease;
+  display: inline-block;
+  -webkit-transform: rotateZ(180deg);
+}
+.fly__label--spin.fly__label--active {
+  opacity: 1;
+}
+.fly__label--spin.fly__label--active > span {
+  -webkit-transform: rotateZ(0deg);
+}

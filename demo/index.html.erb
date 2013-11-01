@@ -36,12 +36,13 @@
           }
           @behaviors.each_with_index do |behavior, index|
             label = labels.shuffle!.pop || 'Email Address'
+            label_spanned = label.split('').map{ |x| "<span>#{x == ' ' ? '&nbsp' : x}</span>"}.join
         %>
           <section class="demo-section column-wrapper cf">
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading"><%= behavior.name %></h1>
               <div class="fly__group">
-                <label for="<%= behavior.name %>" class="fly__label fly__label--<%= behavior.name %>"><%= label %></label>
+                <label for="<%= behavior.name %>" class="fly__label fly__label--<%= behavior.name %>"><%= label_spanned %></label>
                 <input type="text" name="<%= behavior.name %>" class="fly__input" placeholder="<%= label %>">
               </div>
             </div>
