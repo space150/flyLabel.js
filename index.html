@@ -106,12 +106,18 @@
   transition: all .5s ease;
   display: inline-block;
   -webkit-transform: rotateZ(180deg);
+  -moz-transform:    rotateZ(180deg);
+  -o-transform:      rotateZ(180deg);
+  transform:         rotateZ(180deg);
 }
 .fly__label--spin.fly__label--active {
   opacity: 1;
 }
 .fly__label--spin.fly__label--active > span {
   -webkit-transform: rotateZ(0deg);
+  -moz-transform:    rotateZ(0deg);
+  -o-transform:      rotateZ(0deg);
+  transform:         rotateZ(0deg);
 }
 
     </style>
@@ -134,8 +140,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">classic</h1>
               <div class="fly__group">
-                <label for="classic" class="fly__label fly__label--classic"><span>F</span><span>a</span><span>v</span><span>o</span><span>r</span><span>i</span><span>t</span><span>e</span><span>&nbsp</span><span>C</span><span>o</span><span>l</span><span>o</span><span>r</span></label>
-                <input type="text" name="classic" class="fly__input" placeholder="Favorite Color">
+                <label for="classic" class="fly__label fly__label--classic"><span>D</span><span>e</span><span>s</span><span>t</span><span>r</span><span>o</span><span>y</span><span>&nbsp</span><span>a</span><span>l</span><span>l</span><span>&nbsp</span><span>h</span><span>u</span><span>m</span><span>a</span><span>n</span><span>s</span><span>?</span></label>
+                <input type="text" name="classic" class="fly__input" placeholder="Destroy all humans?">
               </div>
             </div>
             <div class="behavior-code column--right behavior-code--odd">
@@ -155,8 +161,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">drop</h1>
               <div class="fly__group">
-                <label for="drop" class="fly__label fly__label--drop"><span>F</span><span>a</span><span>v</span><span>o</span><span>r</span><span>i</span><span>t</span><span>e</span><span>&nbsp</span><span>P</span><span>o</span><span>w</span><span>e</span><span>r</span><span>&nbsp</span><span>R</span><span>a</span><span>n</span><span>g</span><span>e</span><span>r</span></label>
-                <input type="text" name="drop" class="fly__input" placeholder="Favorite Power Ranger">
+                <label for="drop" class="fly__label fly__label--drop"><span>Y</span><span>o</span><span>u</span><span>r</span><span>&nbsp</span><span>Q</span><span>u</span><span>e</span><span>s</span><span>t</span></label>
+                <input type="text" name="drop" class="fly__input" placeholder="Your Quest">
               </div>
             </div>
             <div class="behavior-code column--right ">
@@ -186,8 +192,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">from-right</h1>
               <div class="fly__group">
-                <label for="from-right" class="fly__label fly__label--from-right"><span>Y</span><span>o</span><span>u</span><span>r</span><span>&nbsp</span><span>Q</span><span>u</span><span>e</span><span>s</span><span>t</span></label>
-                <input type="text" name="from-right" class="fly__input" placeholder="Your Quest">
+                <label for="from-right" class="fly__label fly__label--from-right"><span>S</span><span>e</span><span>r</span><span>i</span><span>a</span><span>l</span><span>&nbsp</span><span>N</span><span>u</span><span>m</span><span>b</span><span>e</span><span>r</span></label>
+                <input type="text" name="from-right" class="fly__input" placeholder="Serial Number">
               </div>
             </div>
             <div class="behavior-code column--right behavior-code--odd">
@@ -207,8 +213,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">spin</h1>
               <div class="fly__group">
-                <label for="spin" class="fly__label fly__label--spin"><span>D</span><span>e</span><span>s</span><span>t</span><span>r</span><span>o</span><span>y</span><span>&nbsp</span><span>a</span><span>l</span><span>l</span><span>&nbsp</span><span>h</span><span>u</span><span>m</span><span>a</span><span>n</span><span>s</span><span>?</span></label>
-                <input type="text" name="spin" class="fly__input" placeholder="Destroy all humans?">
+                <label for="spin" class="fly__label fly__label--spin"><span>F</span><span>a</span><span>v</span><span>o</span><span>r</span><span>i</span><span>t</span><span>e</span><span>&nbsp</span><span>P</span><span>o</span><span>w</span><span>e</span><span>r</span><span>&nbsp</span><span>R</span><span>a</span><span>n</span><span>g</span><span>e</span><span>r</span></label>
+                <input type="text" name="spin" class="fly__input" placeholder="Favorite Power Ranger">
               </div>
             </div>
             <div class="behavior-code column--right ">
@@ -219,12 +225,18 @@
   <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.5s</span> <span class="n">ease</span><span class="p">;</span>
   <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
   <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>    <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
+  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>      <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
+  <span class="n">transform</span><span class="o">:</span>         <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="nc">.fly__label--spin.fly__label--active</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.fly__label--spin.fly__label--active</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
   <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
+  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>    <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
+  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>      <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
+  <span class="n">transform</span><span class="o">:</span>         <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
 <span class="p">}</span>
 </pre></div>
             </div>
