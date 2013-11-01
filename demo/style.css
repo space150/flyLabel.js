@@ -108,7 +108,7 @@ input {
   padding: .2em .4em;
 }
 input:focus {
-  outline: 3px solid orange;
+  outline: 3px solid blue;
 }
 input[type=submit] {
   color: white;
@@ -212,5 +212,5 @@ input[type=submit] {
   top: 1em;
 }
 .fly__label--focus {
-  color: orange;
+  color: blue;
 }
