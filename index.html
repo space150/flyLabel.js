@@ -68,10 +68,12 @@
 .il { color: #ae81ff } /* Literal.Number.Integer.Long */.fly__label--classic {
   opacity: 0;
   top: 2em;
+  z-index: -1;
 }
 .fly__label--classic.fly__label--active {
   opacity: 1;
   top: 1em;
+  z-index: 1;
 }
 .fly__label--drop {
   opacity: 0;
@@ -140,18 +142,20 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">classic</h1>
               <div class="fly__group">
-                <label for="classic" class="fly__label fly__label--classic"><span>D</span><span>e</span><span>s</span><span>t</span><span>r</span><span>o</span><span>y</span><span>&nbsp</span><span>a</span><span>l</span><span>l</span><span>&nbsp</span><span>h</span><span>u</span><span>m</span><span>a</span><span>n</span><span>s</span><span>?</span></label>
-                <input type="text" name="classic" class="fly__input" placeholder="Destroy all humans?">
+                <label for="classic" class="fly__label fly__label--classic"><span>S</span><span>e</span><span>r</span><span>i</span><span>a</span><span>l</span><span>&nbsp</span><span>N</span><span>u</span><span>m</span><span>b</span><span>e</span><span>r</span></label>
+                <input type="text" name="classic" class="fly__input" placeholder="Serial Number">
               </div>
             </div>
             <div class="behavior-code column--right behavior-code--odd">
               <div class="highlight"><pre><span class="nc">.fly__label--classic</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="k">top</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span>
+  <span class="k">z-index</span><span class="o">:</span> <span class="m">-1</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.fly__label--classic.fly__label--active</span> <span class="p">{</span>
   <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
   <span class="k">top</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
+  <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
             </div>
@@ -161,8 +165,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">drop</h1>
               <div class="fly__group">
-                <label for="drop" class="fly__label fly__label--drop"><span>Y</span><span>o</span><span>u</span><span>r</span><span>&nbsp</span><span>Q</span><span>u</span><span>e</span><span>s</span><span>t</span></label>
-                <input type="text" name="drop" class="fly__input" placeholder="Your Quest">
+                <label for="drop" class="fly__label fly__label--drop"><span>E</span><span>m</span><span>a</span><span>i</span><span>l</span><span>&nbsp</span><span>A</span><span>d</span><span>d</span><span>r</span><span>e</span><span>s</span><span>s</span></label>
+                <input type="text" name="drop" class="fly__input" placeholder="Email Address">
               </div>
             </div>
             <div class="behavior-code column--right ">
@@ -192,8 +196,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">from-right</h1>
               <div class="fly__group">
-                <label for="from-right" class="fly__label fly__label--from-right"><span>S</span><span>e</span><span>r</span><span>i</span><span>a</span><span>l</span><span>&nbsp</span><span>N</span><span>u</span><span>m</span><span>b</span><span>e</span><span>r</span></label>
-                <input type="text" name="from-right" class="fly__input" placeholder="Serial Number">
+                <label for="from-right" class="fly__label fly__label--from-right"><span>Y</span><span>o</span><span>u</span><span>r</span><span>&nbsp</span><span>Q</span><span>u</span><span>e</span><span>s</span><span>t</span></label>
+                <input type="text" name="from-right" class="fly__input" placeholder="Your Quest">
               </div>
             </div>
             <div class="behavior-code column--right behavior-code--odd">
@@ -213,8 +217,8 @@
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading">spin</h1>
               <div class="fly__group">
-                <label for="spin" class="fly__label fly__label--spin"><span>F</span><span>a</span><span>v</span><span>o</span><span>r</span><span>i</span><span>t</span><span>e</span><span>&nbsp</span><span>P</span><span>o</span><span>w</span><span>e</span><span>r</span><span>&nbsp</span><span>R</span><span>a</span><span>n</span><span>g</span><span>e</span><span>r</span></label>
-                <input type="text" name="spin" class="fly__input" placeholder="Favorite Power Ranger">
+                <label for="spin" class="fly__label fly__label--spin"><span>F</span><span>a</span><span>v</span><span>o</span><span>r</span><span>i</span><span>t</span><span>e</span><span>&nbsp</span><span>C</span><span>o</span><span>l</span><span>o</span><span>r</span></label>
+                <input type="text" name="spin" class="fly__input" placeholder="Favorite Color">
               </div>
             </div>
             <div class="behavior-code column--right ">
