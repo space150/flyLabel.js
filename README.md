@@ -14,7 +14,7 @@ examples in the [demo](http://athaeryn.github.io/flyLabel.js).
 
 You'll probably want to download the minified version in `dist/`.
 
-        $ curl -O https://raw.github.com/athaeryn/flyLabel.js/dev/dist/flyLabel.min.js
+        $ curl -O https://raw.github.com/athaeryn/flyLabel.js/master/dist/flyLabel.min.js
 
 ## Use it
 
