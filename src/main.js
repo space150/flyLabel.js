@@ -3,21 +3,21 @@
 
 (function ($) {
   "use strict";
-  var FloatLabel;
+  var FlyLabel;
 
-  FloatLabel = (function () {
-    function _FloatLabel(el, options) {
+  FlyLabel = (function () {
+    function _FlyLabel(el, options) {
       // Set things
       this.el = el;
       this.options = options;
       this.input = this._findInput();
       this.label = this._findLabel();
-      this.namespace = options.namespace || 'flabel';
+      this.namespace = options.namespace || 'fly';
       // Do things
       this._bindEvents();
     }
 
-    _FloatLabel.prototype = {
+    _FlyLabel.prototype = {
       _findInput: function () {
         return $(this.el).find('input, textarea');
       },
@@ -31,30 +31,31 @@
       },
       _onKeyUp: function () {
         if (this.input.val() === '') {
-          this.label.removeClass('flabel__label--active');
+          this.label.removeClass(this.namespace + '__label--active');
         } else {
-          this.label.addClass('flabel__label--active');
+          this.label.addClass(this.namespace + '__label--active');
         }
         return false; // Don't bubble
       },
       _onFocus: function () {
-        this.label.addClass('flabel__label--focus');
+        this.label.addClass(this.namespace + '__label--focus');
         this._onKeyUp();
         return false; // Don't bubble
       },
       _onBlur: function () {
-        this.label.removeClass('flabel__label--focus');
+        this.label.removeClass(this.namespace + '__label--focus');
         this._onKeyUp();
         return false; // Don't bubble
       }
     };
-    return _FloatLabel;
+    return _FlyLabel;
   }());
 
-  $.fn.floatLabels = function (options) {
+  $.fn.flyLabels = function (options) {
     options = options || {};
-    this.find('.flabel__group').each(function () {
-      return new FloatLabel(this, options);
+    options.namespace = options.namespace || 'fly';
+    this.find('.' + options.namespace + '__group').each(function () {
+      return new FlyLabel(this, options);
     });
   };
 

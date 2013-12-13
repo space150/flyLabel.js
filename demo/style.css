@@ -17,6 +17,9 @@ body {
   background: #eee;
   font-family: Helvetica;
 }
+em {
+  font-style: italic;
+}
 .cf:before,
 .cf:after {
   content: " ";
@@ -105,7 +108,7 @@ input {
   padding: .2em .4em;
 }
 input:focus {
-  outline: 3px solid orange;
+  outline: 3px solid blue;
 }
 input[type=submit] {
   color: white;
@@ -197,17 +200,17 @@ input[type=submit] {
   font-weight: 100;
   text-transform: uppercase;
 }
-.flabel__group {
+.fly__group {
   position: relative;
   padding-top: 2em;
 }
-.flabel__label {
+.fly__label {
   font-size: .9em;
   text-transform: uppercase;
   position: absolute;
   transition: all .2s ease;
   top: 1em;
 }
-.flabel__label--focus {
-  color: orange;
+.fly__label--focus {
+  color: blue;
 }

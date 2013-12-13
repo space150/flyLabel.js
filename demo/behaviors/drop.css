@@ -1,15 +1,15 @@
-.flabel__label--drop {
+.fly__label--drop {
   opacity: 0;
-  text-shadow: 0 0 25px orange;
+  text-shadow: 0 0 25px blue;
   -webkit-transform: scale(11);
   -moz-transform:    scale(11);
   -o-transform:      scale(11);
   transform:         scale(11);
   z-index: -1;
 }
-.flabel__label--drop.flabel__label--active {
+.fly__label--drop.fly__label--active {
   opacity: 1;
-  text-shadow: 0 0 0px orange;
+  text-shadow: 0 0 0px blue;
   -webkit-transform: scale(1);
   -moz-transform:    scale(1);
   -o-transform:      scale(1);

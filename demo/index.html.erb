@@ -11,14 +11,16 @@
     </style>
   </head>
   <body id="top">
-    <a href="https://github.com/athaeryn/floatLabel" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/athaeryn/flyLabel.js" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
     <div class="container">
       <div class="container--inner">
         <section class="intro">
-          <h1 class="intro__heading">FloatLabel.js</h1>
-          <p>This is the <a href="https://github.com/athaeryn/floatLabel">FloatLabel.js</a> demo. The CSS defines the behavior
-            of the labels. Behaviors authored by Mike Anderson unless
-            otherwise stated.
+          <h1 class="intro__heading">flyLabel.js</h1>
+          <p>
+            Flexible floating form labels to make your boring placeholders <em>super fly</em>.
+            Based on the <a href="http://mattdsmith.com/float-label-pattern/">FloatLabel</a> pattern by Matt Smith.
+            With flyLabel.js, it's easy to trigger custom behaviors on form labels.
+            Check out the examples, and <a href="https://github.com/athaeryn/flyLabel.js#contributing">contribute your own</a>.
           </p>
         </section>
         <%
@@ -34,13 +36,14 @@
           }
           @behaviors.each_with_index do |behavior, index|
             label = labels.shuffle!.pop || 'Email Address'
+            label_spanned = label.split('').map{ |x| "<span>#{x == ' ' ? '&nbsp' : x}</span>"}.join
         %>
           <section class="demo-section column-wrapper cf">
             <div class="behavior-demo column--left">
               <h1 class="behavior-demo__heading"><%= behavior.name %></h1>
-              <div class="flabel__group">
-                <label for="<%= behavior.name %>" class="flabel__label flabel__label--<%= behavior.name %>"><%= label %></label>
-                <input type="text" name="<%= behavior.name %>" class="flabel__input" placeholder="<%= label %>">
+              <div class="fly__group">
+                <label for="<%= behavior.name %>" class="fly__label fly__label--<%= behavior.name %>"><%= label_spanned %></label>
+                <input type="text" name="<%= behavior.name %>" class="fly__input" placeholder="<%= label %>">
               </div>
             </div>
             <div class="behavior-code column--right <%= 'behavior-code--odd' if index % 2 == 0 %>">
@@ -49,15 +52,15 @@
           </section>
         <% end %>
         <footer>
-          <a href="#top" class="top-link">top</a> | <a href="https://github.com/athaeryn/floatLabel">on github</a>
+          <a href="#top" class="top-link">top</a> | <a href="https://github.com/athaeryn/flyLabel.js">on github</a>
         </footer>
       </div>
     </div>
     <script src="demo/vendor/jquery.min.js"></script>
-    <script src="dist/floatLabel.min.js"></script>
+    <script src="dist/flyLabel.min.js"></script>
     <script>
       if (Modernizr.input.placeholder) {
-        $('body').floatLabels();
+        $('body').flyLabels();
       }
     </script>
   </body>
