@@ -1,0 +1,10 @@
+.classic {
+  opacity: 0;
+  top: 2em;
+  z-index: -1;
+}
+.classic.is-active {
+  opacity: 1;
+  top: 1em;
+  z-index: 1;
+}

@@ -1,0 +1,8 @@
+.from-right {
+  left: 5em;
+  opacity: 0;
+}
+.from-right.is-active {
+  left: 0%;
+  opacity: 1;
+}
