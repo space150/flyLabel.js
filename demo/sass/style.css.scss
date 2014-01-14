@@ -1,24 +1,33 @@
-/*------------------------------------*\
-   Table of Contents:
-     _GLOBAL
-     _INTRO
-     _INPUTS
-     _COLUMNS
-\*------------------------------------*/
+@import "reset";
+@import "compass";
 
 /*------------------------------------*\
-  _GLOBAL
+  _BASE
 \*------------------------------------*/
 * {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 body {
   background: #eee;
+  border-top: 4px solid blue;
+  border-bottom: 4px solid blue;
+
   font-family: Helvetica;
+
+  padding-bottom: 2em;
 }
 em {
   font-style: italic;
+}
+pre {
+  font-size: 0.9em;
+  overflow-x: scroll;
+}
+@media screen and (max-width: 960px) {
+  pre {
+    font-size: 0.7em
+  }
 }
 .cf:before,
 .cf:after {
@@ -40,49 +49,56 @@ em {
 
   margin: 0 auto;
 }
-footer {
+.footer {
   display: none;
   text-align: center;
   margin-bottom: 1em;
 }
+.github-ribbon--text {
+  display: none;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+}
 @media all and (max-width: 480px) {
-  footer {
+  .footer {
     display: block;
   }
   .github-ribbon {
     display: none;
   }
+  .github-ribbon--text {
+    display: block;
+  }
 }
 
 
-
 /*------------------------------------*\
-   _INTRO
+  _INTRO
 \*------------------------------------*/
 .intro {
-  padding: 2em 1em;
+  padding: 2em 0;
   width: 50%;
-  font-weight: 100;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   line-height: 1.5;
 }
 .intro__heading {
   font-size: 3em;
-  text-transform: uppercase;
+  font-weight: 300;
 }
 @media screen and (max-width: 960px) {
   .intro {
     width: 75%;
   }
 }
-@media screen and (max-width: 768px) {
-  .intro__heading {
-    font-size: 2em;
-  }
-}
 @media screen and (max-width: 480px) {
   .intro {
     width: 100%;
+    text-align: justify;
+    border-bottom: 1px solid #ccc;
+    padding: 1.5em 0;
+    margin-bottom: 1.5em;
   }
 }
 
@@ -90,7 +106,7 @@ footer {
 
 
 /*------------------------------------*\
-   _INPUTS
+  _INPUTS
 \*------------------------------------*/
 label,
 input {
@@ -99,13 +115,17 @@ input {
 label {
   margin-bottom: .5em;
 }
-input {
+input,
+select {
   width: 100%;
   max-width: 20em;
   margin-bottom: .2em;
   font-size: 1em;
-  border: 3px solid #ddd;
-  padding: .2em .4em;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  padding: .5em .7em;
+  background-color: white;
+  -webkit-appearance: none;
 }
 input:focus {
   outline: 3px solid blue;
@@ -119,11 +139,26 @@ input[type=submit] {
     max-width: none;
   }
 }
-
+.select-wrapper {
+  position: relative;
+  max-width: 20em;
+  &:after {
+    content: "v";
+    color: #555;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    line-height: 0;
+    font-weight: 100;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transform: scaleY(0.5) scaleX(1.5);
+    pointer-events: none;
+  }
+}
 
 
 /*------------------------------------*\
-   _COLUMNS
+  _COLUMNS
 \*------------------------------------*/
 .column-wrapper {
   display: table;
@@ -139,7 +174,7 @@ input[type=submit] {
 .column--right {
   float: right;
 }
-@media all and (max-width: 768px) {
+@media all and (max-width: 767px) {
   .column--left,
   .column--right {
     width: 100%;
@@ -161,26 +196,14 @@ input[type=submit] {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
-.behavior-code--odd {
-  background: #222;
-}
-.highlight {
-  font-size: 0.9em;
-  overflow-x: scroll;
-}
-@media screen and (max-width: 960px) {
-  .highlight {
-    font-size: 0.7em
+@media screen and (min-width: 768px) {
+  .behavior-code--odd {
+    background: #222;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .column-wrapper {
     display: block;
-  }
-  .behavior-code,
-  .behavior-code--odd {
-    background: 0;
-    padding-top: 0;
   }
   .highlight {
     background: #333;
@@ -192,25 +215,30 @@ input[type=submit] {
 }
 
 .behavior-demo {
-  padding: 1em;
-  padding-top: 0;
+  padding: 0;
+  padding-bottom: 1em;
 }
 .behavior-demo__heading {
   font-size: 1.7em;
   font-weight: 100;
-  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: .5em;
+  padding-top: .3em;
 }
-.fly__group {
+.fly-group {
   position: relative;
   padding-top: 2em;
 }
-.fly__label {
+.fly-label {
   font-size: .9em;
   text-transform: uppercase;
   position: absolute;
   transition: all .2s ease;
   top: 1em;
+  display: inline-block;
+  &.has-focus {
+    color: blue;
+  }
 }
-.fly__label--focus {
-  color: blue;
-}
+
+@import "behaviors/all";

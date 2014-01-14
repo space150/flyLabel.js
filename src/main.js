@@ -3,16 +3,15 @@
 
 (function ($) {
   "use strict";
-  var FlyLabel;
-
-  FlyLabel = (function () {
-    function _FlyLabel(el, options) {
+  var FlyLabel = (function () {
+    function _FlyLabel(el) {
       // Set things
       this.el = el;
-      this.options = options;
       this.input = this._findInput();
+      if (this.input.length !== 1) {
+        this.input = this._findSelect();
+      }
       this.label = this._findLabel();
-      this.namespace = options.namespace || 'fly';
       // Do things
       this._bindEvents();
     }
@@ -24,26 +23,29 @@
       _findLabel: function () {
         return $(this.el).find('label');
       },
+      _findSelect: function () {
+        return $(this.el).find('select');
+      },
       _bindEvents: function () {
-        this.input.on('keyup', $.proxy(this._onKeyUp, this));
+        this.input.on('keyup change', $.proxy(this._onKeyUp, this));
         this.input.on('blur', $.proxy(this._onBlur, this));
         this.input.on('focus', $.proxy(this._onFocus, this));
       },
       _onKeyUp: function () {
         if (this.input.val() === '') {
-          this.label.removeClass(this.namespace + '__label--active');
+          this.label.removeClass('is-active');
         } else {
-          this.label.addClass(this.namespace + '__label--active');
+          this.label.addClass('is-active');
         }
         return false; // Don't bubble
       },
       _onFocus: function () {
-        this.label.addClass(this.namespace + '__label--focus');
+        this.label.addClass('has-focus');
         this._onKeyUp();
         return false; // Don't bubble
       },
       _onBlur: function () {
-        this.label.removeClass(this.namespace + '__label--focus');
+        this.label.removeClass('has-focus');
         this._onKeyUp();
         return false; // Don't bubble
       }
@@ -51,11 +53,9 @@
     return _FlyLabel;
   }());
 
-  $.fn.flyLabels = function (options) {
-    options = options || {};
-    options.namespace = options.namespace || 'fly';
-    this.find('.' + options.namespace + '__group').each(function () {
-      return new FlyLabel(this, options);
+  $.fn.flyLabels = function () {
+    this.find('.fly-group').each(function () {
+      return new FlyLabel(this);
     });
   };
 

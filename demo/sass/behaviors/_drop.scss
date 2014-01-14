@@ -1,0 +1,12 @@
+.drop {
+  opacity: 0;
+  @include text-shadow(0 0 25px blue);
+  @include transform(scale(11));
+  z-index: -1;
+}
+.drop.is-active {
+  opacity: 1;
+  @include text-shadow(0 0 0 blue);
+  @include transform(scale(1));
+  z-index: 1;
+}

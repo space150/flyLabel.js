@@ -1,8 +1,0 @@
-.fly__label--from-right {
-  left: 5em;
-  opacity: 0;
-}
-.fly__label--from-right.fly__label--active {
-  left: 0%;
-  opacity: 1;
-}

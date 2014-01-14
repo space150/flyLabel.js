@@ -2,133 +2,15 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width">
-    <meta name="viewport" value="width=device-width">
-    <link rel="stylesheet" href="demo/reset.css">
-    <link rel="stylesheet" href="demo/style.css">
+    <link rel="stylesheet" href="demo/stylesheets/style.css">
     <script src="demo/vendor/modernizr.min.js"></script>
-    <style>
-      .hll { background-color: #49483e }
-.c { color: #75715e } /* Comment */
-.err { color: #960050; background-color: #1e0010 } /* Error */
-.k { color: #66d9ef } /* Keyword */
-.l { color: #ae81ff } /* Literal */
-.n { color: #f8f8f2 } /* Name */
-.o { color: #f92672 } /* Operator */
-.p { color: #f8f8f2 } /* Punctuation */
-.cm { color: #75715e } /* Comment.Multiline */
-.cp { color: #75715e } /* Comment.Preproc */
-.c1 { color: #75715e } /* Comment.Single */
-.cs { color: #75715e } /* Comment.Special */
-.ge { font-style: italic } /* Generic.Emph */
-.gs { font-weight: bold } /* Generic.Strong */
-.kc { color: #66d9ef } /* Keyword.Constant */
-.kd { color: #66d9ef } /* Keyword.Declaration */
-.kn { color: #f92672 } /* Keyword.Namespace */
-.kp { color: #66d9ef } /* Keyword.Pseudo */
-.kr { color: #66d9ef } /* Keyword.Reserved */
-.kt { color: #66d9ef } /* Keyword.Type */
-.ld { color: #e6db74 } /* Literal.Date */
-.m { color: #ae81ff } /* Literal.Number */
-.s { color: #e6db74 } /* Literal.String */
-.na { color: #a6e22e } /* Name.Attribute */
-.nb { color: #f8f8f2 } /* Name.Builtin */
-.nc { color: #a6e22e } /* Name.Class */
-.no { color: #66d9ef } /* Name.Constant */
-.nd { color: #a6e22e } /* Name.Decorator */
-.ni { color: #f8f8f2 } /* Name.Entity */
-.ne { color: #a6e22e } /* Name.Exception */
-.nf { color: #a6e22e } /* Name.Function */
-.nl { color: #f8f8f2 } /* Name.Label */
-.nn { color: #f8f8f2 } /* Name.Namespace */
-.nx { color: #a6e22e } /* Name.Other */
-.py { color: #f8f8f2 } /* Name.Property */
-.nt { color: #f92672 } /* Name.Tag */
-.nv { color: #f8f8f2 } /* Name.Variable */
-.ow { color: #f92672 } /* Operator.Word */
-.w { color: #f8f8f2 } /* Text.Whitespace */
-.mf { color: #ae81ff } /* Literal.Number.Float */
-.mh { color: #ae81ff } /* Literal.Number.Hex */
-.mi { color: #ae81ff } /* Literal.Number.Integer */
-.mo { color: #ae81ff } /* Literal.Number.Oct */
-.sb { color: #e6db74 } /* Literal.String.Backtick */
-.sc { color: #e6db74 } /* Literal.String.Char */
-.sd { color: #e6db74 } /* Literal.String.Doc */
-.s2 { color: #e6db74 } /* Literal.String.Double */
-.se { color: #ae81ff } /* Literal.String.Escape */
-.sh { color: #e6db74 } /* Literal.String.Heredoc */
-.si { color: #e6db74 } /* Literal.String.Interpol */
-.sx { color: #e6db74 } /* Literal.String.Other */
-.sr { color: #e6db74 } /* Literal.String.Regex */
-.s1 { color: #e6db74 } /* Literal.String.Single */
-.ss { color: #e6db74 } /* Literal.String.Symbol */
-.bp { color: #f8f8f2 } /* Name.Builtin.Pseudo */
-.vc { color: #f8f8f2 } /* Name.Variable.Class */
-.vg { color: #f8f8f2 } /* Name.Variable.Global */
-.vi { color: #f8f8f2 } /* Name.Variable.Instance */
-.il { color: #ae81ff } /* Literal.Number.Integer.Long */.fly__label--classic {
-  opacity: 0;
-  top: 2em;
-  z-index: -1;
-}
-.fly__label--classic.fly__label--active {
-  opacity: 1;
-  top: 1em;
-  z-index: 1;
-}
-.fly__label--drop {
-  opacity: 0;
-  text-shadow: 0 0 25px blue;
-  -webkit-transform: scale(11);
-  -moz-transform:    scale(11);
-  -o-transform:      scale(11);
-  transform:         scale(11);
-  z-index: -1;
-}
-.fly__label--drop.fly__label--active {
-  opacity: 1;
-  text-shadow: 0 0 0px blue;
-  -webkit-transform: scale(1);
-  -moz-transform:    scale(1);
-  -o-transform:      scale(1);
-  transform:         scale(1);
-  z-index: 1;
-}
-.fly__label--from-right {
-  left: 5em;
-  opacity: 0;
-}
-.fly__label--from-right.fly__label--active {
-  left: 0%;
-  opacity: 1;
-}
-.fly__label--spin {
-  opacity: 0;
-}
-.fly__label--spin > span {
-  transition: all .5s ease;
-  display: inline-block;
-  -webkit-transform: rotateZ(180deg);
-  -moz-transform:    rotateZ(180deg);
-  -o-transform:      rotateZ(180deg);
-  transform:         rotateZ(180deg);
-}
-.fly__label--spin.fly__label--active {
-  opacity: 1;
-}
-.fly__label--spin.fly__label--active > span {
-  -webkit-transform: rotateZ(0deg);
-  -moz-transform:    rotateZ(0deg);
-  -o-transform:      rotateZ(0deg);
-  transform:         rotateZ(0deg);
-}
-
-    </style>
   </head>
   <body id="top">
     <a href="https://github.com/athaeryn/flyLabel.js" class="github-ribbon"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/athaeryn/flyLabel.js" class="github-ribbon--text">on github</a>
     <div class="container">
       <div class="container--inner">
-        <section class="intro">
+        <div class="intro">
           <h1 class="intro__heading">flyLabel.js</h1>
           <p>
             Flexible floating form labels to make your boring placeholders <em>super fly</em>.
@@ -136,119 +18,135 @@
             With flyLabel.js, it's easy to trigger custom behaviors on form labels.
             Check out the examples, and <a href="https://github.com/athaeryn/flyLabel.js#contributing">contribute your own</a>.
           </p>
-        </section>
-        
-          <section class="demo-section column-wrapper cf">
-            <div class="behavior-demo column--left">
-              <h1 class="behavior-demo__heading">classic</h1>
-              <div class="fly__group">
-                <label for="classic" class="fly__label fly__label--classic"><span>F</span><span>a</span><span>v</span><span>o</span><span>r</span><span>i</span><span>t</span><span>e</span><span>&nbsp</span><span>P</span><span>o</span><span>w</span><span>e</span><span>r</span><span>&nbsp</span><span>R</span><span>a</span><span>n</span><span>g</span><span>e</span><span>r</span></label>
-                <input type="text" name="classic" class="fly__input" placeholder="Favorite Power Ranger">
+        </div>
+
+        <div class="demo-section column-wrapper cf">
+          <div class="behavior-demo column--left">
+            <h1 class="behavior-demo__heading">Classic</h1>
+            <div class="fly-group">
+              <label for="classic" class="fly-label classic">Favorite Power Ranger</label>
+              <input type="text" name="classic" class="fly-input" placeholder="Favorite Power Ranger">
+            </div>
+          </div>
+          <div class="behavior-code column--right behavior-code--odd">
+            <pre>
+.classic {
+  opacity: 0;
+  top: 2em;
+  z-index: -1;
+}
+.classic.is-active {
+  opacity: 1;
+  top: 1em;
+  z-index: 1;
+}
+            </pre>
+          </div>
+        </div>
+
+        <div class="demo-section column-wrapper cf">
+          <div class="behavior-demo column--left">
+            <h1 class="behavior-demo__heading">Drop</h1>
+            <div class="fly-group">
+              <label for="drop" class="fly-label drop">First Name</label>
+              <input type="text" name="drop" class="fly-input" placeholder="First Name">
+            </div>
+          </div>
+          <div class="behavior-code column--right ">
+            <pre>
+.drop {
+  opacity: 0;
+  text-shadow: 0 0 25px blue;
+  transform: scale(11);
+  z-index: -1;
+}
+.drop.is-active {
+  opacity: 1;
+  text-shadow: 0 0 0 blue;
+  transform: scale(1);
+  z-index: 1;
+}
+            </pre>
+          </div>
+        </div>
+
+        <div class="demo-section column-wrapper cf">
+          <div class="behavior-demo column--left">
+            <h1 class="behavior-demo__heading">From Right</h1>
+            <div class="fly-group">
+              <label for="from-right" class="fly-label from-right">Last Name</label>
+              <input type="text" name="from-right" class="fly-input" placeholder="Last Name">
+            </div>
+          </div>
+          <div class="behavior-code column--right behavior-code--odd">
+            <pre>
+.from-right {
+  left: 5em;
+  opacity: 0;
+}
+.from-right.is-active {
+  left: 0%;
+  opacity: 1;
+}
+            </pre>
+          </div>
+        </div>
+
+        <div class="demo-section column-wrapper cf">
+          <div class="behavior-demo column--left">
+            <h1 class="behavior-demo__heading">Jiggle</h1>
+            <div class="fly-group">
+              <label for="jiggle" class="fly-label jiggle">Favorite Color</label>
+              <input type="text" name="jiggle" class="fly-input" placeholder="e.g. red, blue, etc.">
+            </div>
+          </div>
+          <div class="behavior-code column--right ">
+            <pre>
+.jiggle.is-active {
+  animation: JIGGLE .3s ease;
+  animation-iteration-count: 3;
+}
+            </pre>
+          </div>
+        </div>
+
+        <div class="demo-section column-wrapper cf">
+          <div class="behavior-demo column--left">
+            <h1 class="behavior-demo__heading">Select</h1>
+            <div class="fly-group">
+              <label for="select" class="fly-label classic">Secret Number</label>
+              <div class="select-wrapper">
+                <select name="select" class="fly-input">
+                  <option value="">Secret Number</option>
+                  <option value="4">4</option>
+                  <option value="8">8</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="23">23</option>
+                  <option value="42">42</option>
+                </select>
               </div>
             </div>
-            <div class="behavior-code column--right behavior-code--odd">
-              <div class="highlight"><pre><span class="nc">.fly__label--classic</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">2em</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">-1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fly__label--classic.fly__label--active</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-  <span class="k">top</span><span class="o">:</span> <span class="m">1em</span><span class="p">;</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-            </div>
-          </section>
-        
-          <section class="demo-section column-wrapper cf">
-            <div class="behavior-demo column--left">
-              <h1 class="behavior-demo__heading">drop</h1>
-              <div class="fly__group">
-                <label for="drop" class="fly__label fly__label--drop"><span>F</span><span>i</span><span>r</span><span>s</span><span>t</span><span>&nbsp</span><span>N</span><span>a</span><span>m</span><span>e</span></label>
-                <input type="text" name="drop" class="fly__input" placeholder="First Name">
-              </div>
-            </div>
-            <div class="behavior-code column--right ">
-              <div class="highlight"><pre><span class="nc">.fly__label--drop</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">25px</span> <span class="nb">blue</span><span class="p">;</span>
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>    <span class="n">scale</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>      <span class="n">scale</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
-  <span class="n">transform</span><span class="o">:</span>         <span class="n">scale</span><span class="p">(</span><span class="m">11</span><span class="p">);</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">-1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fly__label--drop.fly__label--active</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-  <span class="k">text-shadow</span><span class="o">:</span> <span class="m">0</span> <span class="m">0</span> <span class="m">0px</span> <span class="nb">blue</span><span class="p">;</span>
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>    <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>      <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="n">transform</span><span class="o">:</span>         <span class="n">scale</span><span class="p">(</span><span class="m">1</span><span class="p">);</span>
-  <span class="k">z-index</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-            </div>
-          </section>
-        
-          <section class="demo-section column-wrapper cf">
-            <div class="behavior-demo column--left">
-              <h1 class="behavior-demo__heading">from-right</h1>
-              <div class="fly__group">
-                <label for="from-right" class="fly__label fly__label--from-right"><span>L</span><span>a</span><span>s</span><span>t</span><span>&nbsp</span><span>N</span><span>a</span><span>m</span><span>e</span></label>
-                <input type="text" name="from-right" class="fly__input" placeholder="Last Name">
-              </div>
-            </div>
-            <div class="behavior-code column--right behavior-code--odd">
-              <div class="highlight"><pre><span class="nc">.fly__label--from-right</span> <span class="p">{</span>
-  <span class="k">left</span><span class="o">:</span> <span class="m">5em</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fly__label--from-right.fly__label--active</span> <span class="p">{</span>
-  <span class="k">left</span><span class="o">:</span> <span class="m">0</span><span class="o">%</span><span class="p">;</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-            </div>
-          </section>
-        
-          <section class="demo-section column-wrapper cf">
-            <div class="behavior-demo column--left">
-              <h1 class="behavior-demo__heading">spin</h1>
-              <div class="fly__group">
-                <label for="spin" class="fly__label fly__label--spin"><span>E</span><span>m</span><span>a</span><span>i</span><span>l</span><span>&nbsp</span><span>A</span><span>d</span><span>d</span><span>r</span><span>e</span><span>s</span><span>s</span></label>
-                <input type="text" name="spin" class="fly__input" placeholder="Email Address">
-              </div>
-            </div>
-            <div class="behavior-code column--right ">
-              <div class="highlight"><pre><span class="nc">.fly__label--spin</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fly__label--spin</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-  <span class="n">transition</span><span class="o">:</span> <span class="n">all</span> <span class="m">.5s</span> <span class="n">ease</span><span class="p">;</span>
-  <span class="k">display</span><span class="o">:</span> <span class="k">inline</span><span class="o">-</span><span class="k">block</span><span class="p">;</span>
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>    <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>      <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
-  <span class="n">transform</span><span class="o">:</span>         <span class="n">rotateZ</span><span class="p">(</span><span class="m">180</span><span class="n">deg</span><span class="p">);</span>
-<span class="p">}</span>
-<span class="nc">.fly__label--spin.fly__label--active</span> <span class="p">{</span>
-  <span class="k">opacity</span><span class="o">:</span> <span class="m">1</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.fly__label--spin.fly__label--active</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-  <span class="o">-</span><span class="n">webkit</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span> <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">moz</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>    <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
-  <span class="o">-</span><span class="n">o</span><span class="o">-</span><span class="n">transform</span><span class="o">:</span>      <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
-  <span class="n">transform</span><span class="o">:</span>         <span class="n">rotateZ</span><span class="p">(</span><span class="m">0</span><span class="n">deg</span><span class="p">);</span>
-<span class="p">}</span>
-</pre></div>
-            </div>
-          </section>
-        
-        <footer>
-          <a href="#top" class="top-link">top</a> | <a href="https://github.com/athaeryn/flyLabel.js">on github</a>
-        </footer>
+          </div>
+          <div class="behavior-code column--right behavior-code--odd">
+            <pre>
+.classic {
+  opacity: 0;
+  top: 2em;
+  z-index: -1;
+}
+.classic.is-active {
+  opacity: 1;
+  top: 1em;
+  z-index: 1;
+}
+            </pre>
+          </div>
+        </div>
+
+        <div class="footer">
+          <a href="https://github.com/athaeryn/flyLabel.js">on github</a>
+        </div>
       </div>
     </div>
     <script src="demo/vendor/jquery.min.js"></script>
