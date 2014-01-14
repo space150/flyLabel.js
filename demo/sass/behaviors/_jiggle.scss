@@ -1,0 +1,34 @@
+@-webkit-keyframes JIGGLE {
+  0% {   @include translate3d(  0px,  0px, 0 ) }
+  20% {  @include translate3d( -2px,  0px, 0 ) }
+  40% {  @include translate3d(  2px,  2px, 0 ) }
+  60% {  @include translate3d(  0px, -2px, 0 ) }
+  80% {  @include translate3d(  2px,  0px, 0 ) }
+  100% { @include translate3d(  0px,  0px, 0 ) }
+}
+@-moz-keyframes JIGGLE {
+  0% {   @include translate3d(  0px,  0px, 0 ) }
+  20% {  @include translate3d( -2px,  0px, 0 ) }
+  40% {  @include translate3d(  2px,  2px, 0 ) }
+  60% {  @include translate3d(  0px, -2px, 0 ) }
+  80% {  @include translate3d(  2px,  0px, 0 ) }
+  100% { @include translate3d(  0px,  0px, 0 ) }
+}
+@keyframes JIGGLE {
+  0% {   @include translate3d(  0px,  0px, 0 ) }
+  20% {  @include translate3d( -2px,  0px, 0 ) }
+  40% {  @include translate3d(  2px,  2px, 0 ) }
+  60% {  @include translate3d(  0px, -2px, 0 ) }
+  80% {  @include translate3d(  2px,  0px, 0 ) }
+  100% { @include translate3d(  0px,  0px, 0 ) }
+}
+.jiggle.is-active {
+  -webkit-animation: JIGGLE .3s ease;
+  -moz-animation:    JIGGLE .3s ease;
+  -o-animation:      JIGGLE .3s ease;
+  animation:         JIGGLE .3s ease;
+  -webkit-animation-iteration-count: 3;
+  -moz-animation-iteration-count:    3;
+  -o-animation-iteration-count:      3;
+  animation-iteration-count:         3;
+}

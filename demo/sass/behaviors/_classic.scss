@@ -1,9 +1,9 @@
-.fly__label--classic {
+.classic {
   opacity: 0;
   top: 2em;
   z-index: -1;
 }
-.fly__label--classic.fly__label--active {
+.classic.is-active {
   opacity: 1;
   top: 1em;
   z-index: 1;

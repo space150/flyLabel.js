@@ -1,0 +1,586 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 18, ../sass/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, ../sass/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 31, ../sass/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 34, ../sass/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 37, ../sass/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, ../sass/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 45, ../sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+  _BASE
+\*------------------------------------*/
+/* line 7, ../sass/style.css.scss */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+/* line 11, ../sass/style.css.scss */
+body {
+  background: #eee;
+  border-top: 4px solid blue;
+  border-bottom: 4px solid blue;
+  font-family: Helvetica;
+  padding-bottom: 2em;
+}
+
+/* line 20, ../sass/style.css.scss */
+em {
+  font-style: italic;
+}
+
+/* line 23, ../sass/style.css.scss */
+pre {
+  font-size: 0.9em;
+  overflow-x: scroll;
+}
+
+@media screen and (max-width: 960px) {
+  /* line 28, ../sass/style.css.scss */
+  pre {
+    font-size: 0.7em;
+  }
+}
+/* line 33, ../sass/style.css.scss */
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+/* line 37, ../sass/style.css.scss */
+.cf:after {
+  clear: both;
+}
+
+/* line 40, ../sass/style.css.scss */
+.cf {
+  *zoom: 1;
+}
+
+/* line 43, ../sass/style.css.scss */
+.container {
+  overflow: hidden;
+}
+
+/* line 46, ../sass/style.css.scss */
+.container--inner {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* line 52, ../sass/style.css.scss */
+.footer {
+  display: none;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* line 57, ../sass/style.css.scss */
+.github-ribbon--text {
+  display: none;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+}
+
+@media all and (max-width: 480px) {
+  /* line 64, ../sass/style.css.scss */
+  .footer {
+    display: block;
+  }
+
+  /* line 67, ../sass/style.css.scss */
+  .github-ribbon {
+    display: none;
+  }
+
+  /* line 70, ../sass/style.css.scss */
+  .github-ribbon--text {
+    display: block;
+  }
+}
+/*------------------------------------*\
+  _INTRO
+\*------------------------------------*/
+/* line 79, ../sass/style.css.scss */
+.intro {
+  padding: 2em 0;
+  width: 50%;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* line 86, ../sass/style.css.scss */
+.intro__heading {
+  font-size: 3em;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 960px) {
+  /* line 91, ../sass/style.css.scss */
+  .intro {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 96, ../sass/style.css.scss */
+  .intro {
+    width: 100%;
+    text-align: justify;
+    border-bottom: 1px solid #ccc;
+    padding: 1.5em 0;
+    margin-bottom: 1.5em;
+  }
+}
+/*------------------------------------*\
+  _INPUTS
+\*------------------------------------*/
+/* line 112, ../sass/style.css.scss */
+label,
+input {
+  display: block;
+}
+
+/* line 115, ../sass/style.css.scss */
+label {
+  margin-bottom: .5em;
+}
+
+/* line 119, ../sass/style.css.scss */
+input,
+select {
+  width: 100%;
+  max-width: 20em;
+  margin-bottom: .2em;
+  font-size: 1em;
+  border: 1px solid #bbb;
+  border-radius: 0;
+  padding: .5em .7em;
+  background-color: white;
+  -webkit-appearance: none;
+}
+
+/* line 130, ../sass/style.css.scss */
+input:focus {
+  outline: 3px solid blue;
+}
+
+/* line 133, ../sass/style.css.scss */
+input[type=submit] {
+  color: white;
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 480px) {
+  /* line 138, ../sass/style.css.scss */
+  input {
+    max-width: none;
+  }
+}
+/* line 142, ../sass/style.css.scss */
+.select-wrapper {
+  position: relative;
+  max-width: 20em;
+}
+/* line 145, ../sass/style.css.scss */
+.select-wrapper:after {
+  content: "v";
+  color: #555;
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  line-height: 0;
+  font-weight: 100;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transform: scaleY(0.5) scaleX(1.5);
+  pointer-events: none;
+}
+
+/*------------------------------------*\
+  _COLUMNS
+\*------------------------------------*/
+/* line 163, ../sass/style.css.scss */
+.column-wrapper {
+  display: table;
+  width: 100%;
+}
+
+/* line 168, ../sass/style.css.scss */
+.column--left,
+.column--right {
+  width: 50%;
+}
+
+/* line 171, ../sass/style.css.scss */
+.column--left {
+  float: left;
+}
+
+/* line 174, ../sass/style.css.scss */
+.column--right {
+  float: right;
+}
+
+@media all and (max-width: 767px) {
+  /* line 179, ../sass/style.css.scss */
+  .column--left,
+  .column--right {
+    width: 100%;
+  }
+}
+/* line 186, ../sass/style.css.scss */
+.behavior-code {
+  padding: 1.5em 1em;
+  min-height: 7em;
+  background: #333;
+  color: white;
+  font-family: Consolas, monaco, monospace;
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media screen and (min-width: 768px) {
+  /* line 200, ../sass/style.css.scss */
+  .behavior-code--odd {
+    background: #222;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 205, ../sass/style.css.scss */
+  .column-wrapper {
+    display: block;
+  }
+
+  /* line 208, ../sass/style.css.scss */
+  .highlight {
+    background: #333;
+    padding: 1em;
+  }
+
+  /* line 212, ../sass/style.css.scss */
+  .demo-section {
+    margin-bottom: 4em;
+  }
+}
+/* line 217, ../sass/style.css.scss */
+.behavior-demo {
+  padding: 0;
+  padding-bottom: 1em;
+}
+
+/* line 221, ../sass/style.css.scss */
+.behavior-demo__heading {
+  font-size: 1.7em;
+  font-weight: 100;
+  margin: 0;
+  margin-bottom: .5em;
+  padding-top: .3em;
+}
+
+/* line 228, ../sass/style.css.scss */
+.fly-group {
+  position: relative;
+  padding-top: 2em;
+}
+
+/* line 232, ../sass/style.css.scss */
+.fly-label {
+  font-size: .9em;
+  text-transform: uppercase;
+  position: absolute;
+  transition: all .2s ease;
+  top: 1em;
+  display: inline-block;
+}
+/* line 239, ../sass/style.css.scss */
+.fly-label.has-focus {
+  color: blue;
+}
+
+/* line 1, ../sass/behaviors/_classic.scss */
+.classic {
+  opacity: 0;
+  top: 2em;
+  z-index: -1;
+}
+
+/* line 6, ../sass/behaviors/_classic.scss */
+.classic.is-active {
+  opacity: 1;
+  top: 1em;
+  z-index: 1;
+}
+
+/* line 1, ../sass/behaviors/_drop.scss */
+.drop {
+  opacity: 0;
+  text-shadow: 0 0 25px blue;
+  -webkit-transform: scale(11);
+  -moz-transform: scale(11);
+  -ms-transform: scale(11);
+  -o-transform: scale(11);
+  transform: scale(11);
+  z-index: -1;
+}
+
+/* line 7, ../sass/behaviors/_drop.scss */
+.drop.is-active {
+  opacity: 1;
+  text-shadow: 0 0 0 blue;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+  z-index: 1;
+}
+
+/* line 1, ../sass/behaviors/_from-right.scss */
+.from-right {
+  left: 5em;
+  opacity: 0;
+}
+
+/* line 5, ../sass/behaviors/_from-right.scss */
+.from-right.is-active {
+  left: 0%;
+  opacity: 1;
+}
+
+@-webkit-keyframes JIGGLE {
+  /* line 2, ../sass/behaviors/_jiggle.scss */
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    -o-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  /* line 3, ../sass/behaviors/_jiggle.scss */
+  20% {
+    -webkit-transform: translate3d(-2px, 0px, 0);
+    -moz-transform: translate3d(-2px, 0px, 0);
+    -ms-transform: translate3d(-2px, 0px, 0);
+    -o-transform: translate3d(-2px, 0px, 0);
+    transform: translate3d(-2px, 0px, 0);
+  }
+
+  /* line 4, ../sass/behaviors/_jiggle.scss */
+  40% {
+    -webkit-transform: translate3d(2px, 2px, 0);
+    -moz-transform: translate3d(2px, 2px, 0);
+    -ms-transform: translate3d(2px, 2px, 0);
+    -o-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+  }
+
+  /* line 5, ../sass/behaviors/_jiggle.scss */
+  60% {
+    -webkit-transform: translate3d(0px, -2px, 0);
+    -moz-transform: translate3d(0px, -2px, 0);
+    -ms-transform: translate3d(0px, -2px, 0);
+    -o-transform: translate3d(0px, -2px, 0);
+    transform: translate3d(0px, -2px, 0);
+  }
+
+  /* line 6, ../sass/behaviors/_jiggle.scss */
+  80% {
+    -webkit-transform: translate3d(2px, 0px, 0);
+    -moz-transform: translate3d(2px, 0px, 0);
+    -ms-transform: translate3d(2px, 0px, 0);
+    -o-transform: translate3d(2px, 0px, 0);
+    transform: translate3d(2px, 0px, 0);
+  }
+
+  /* line 7, ../sass/behaviors/_jiggle.scss */
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    -o-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+
+@-moz-keyframes JIGGLE {
+  /* line 10, ../sass/behaviors/_jiggle.scss */
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    -o-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  /* line 11, ../sass/behaviors/_jiggle.scss */
+  20% {
+    -webkit-transform: translate3d(-2px, 0px, 0);
+    -moz-transform: translate3d(-2px, 0px, 0);
+    -ms-transform: translate3d(-2px, 0px, 0);
+    -o-transform: translate3d(-2px, 0px, 0);
+    transform: translate3d(-2px, 0px, 0);
+  }
+
+  /* line 12, ../sass/behaviors/_jiggle.scss */
+  40% {
+    -webkit-transform: translate3d(2px, 2px, 0);
+    -moz-transform: translate3d(2px, 2px, 0);
+    -ms-transform: translate3d(2px, 2px, 0);
+    -o-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+  }
+
+  /* line 13, ../sass/behaviors/_jiggle.scss */
+  60% {
+    -webkit-transform: translate3d(0px, -2px, 0);
+    -moz-transform: translate3d(0px, -2px, 0);
+    -ms-transform: translate3d(0px, -2px, 0);
+    -o-transform: translate3d(0px, -2px, 0);
+    transform: translate3d(0px, -2px, 0);
+  }
+
+  /* line 14, ../sass/behaviors/_jiggle.scss */
+  80% {
+    -webkit-transform: translate3d(2px, 0px, 0);
+    -moz-transform: translate3d(2px, 0px, 0);
+    -ms-transform: translate3d(2px, 0px, 0);
+    -o-transform: translate3d(2px, 0px, 0);
+    transform: translate3d(2px, 0px, 0);
+  }
+
+  /* line 15, ../sass/behaviors/_jiggle.scss */
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    -o-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+
+@keyframes JIGGLE {
+  /* line 18, ../sass/behaviors/_jiggle.scss */
+  0% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    -o-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+
+  /* line 19, ../sass/behaviors/_jiggle.scss */
+  20% {
+    -webkit-transform: translate3d(-2px, 0px, 0);
+    -moz-transform: translate3d(-2px, 0px, 0);
+    -ms-transform: translate3d(-2px, 0px, 0);
+    -o-transform: translate3d(-2px, 0px, 0);
+    transform: translate3d(-2px, 0px, 0);
+  }
+
+  /* line 20, ../sass/behaviors/_jiggle.scss */
+  40% {
+    -webkit-transform: translate3d(2px, 2px, 0);
+    -moz-transform: translate3d(2px, 2px, 0);
+    -ms-transform: translate3d(2px, 2px, 0);
+    -o-transform: translate3d(2px, 2px, 0);
+    transform: translate3d(2px, 2px, 0);
+  }
+
+  /* line 21, ../sass/behaviors/_jiggle.scss */
+  60% {
+    -webkit-transform: translate3d(0px, -2px, 0);
+    -moz-transform: translate3d(0px, -2px, 0);
+    -ms-transform: translate3d(0px, -2px, 0);
+    -o-transform: translate3d(0px, -2px, 0);
+    transform: translate3d(0px, -2px, 0);
+  }
+
+  /* line 22, ../sass/behaviors/_jiggle.scss */
+  80% {
+    -webkit-transform: translate3d(2px, 0px, 0);
+    -moz-transform: translate3d(2px, 0px, 0);
+    -ms-transform: translate3d(2px, 0px, 0);
+    -o-transform: translate3d(2px, 0px, 0);
+    transform: translate3d(2px, 0px, 0);
+  }
+
+  /* line 23, ../sass/behaviors/_jiggle.scss */
+  100% {
+    -webkit-transform: translate3d(0px, 0px, 0);
+    -moz-transform: translate3d(0px, 0px, 0);
+    -ms-transform: translate3d(0px, 0px, 0);
+    -o-transform: translate3d(0px, 0px, 0);
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+
+/* line 25, ../sass/behaviors/_jiggle.scss */
+.jiggle.is-active {
+  -webkit-animation: JIGGLE .3s ease;
+  -moz-animation: JIGGLE .3s ease;
+  -o-animation: JIGGLE .3s ease;
+  animation: JIGGLE .3s ease;
+  -webkit-animation-iteration-count: 3;
+  -moz-animation-iteration-count: 3;
+  -o-animation-iteration-count: 3;
+  animation-iteration-count: 3;
+}
