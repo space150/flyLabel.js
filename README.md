@@ -1,4 +1,4 @@
-# flyLabel.js - [DEMO](http://athaeryn.github.com/flyLabel.js)
+# flyLabel.js - [DEMO](http://space150.github.com/flyLabel.js)
 
 ### _Your labels wish they were this fly_
 
@@ -8,13 +8,15 @@ concept](http://mattdsmith.com/float-label-pattern/).
 It's not the goal of this plugin to look like the FloatLabel concept.
 In fact, the goal is not to look like anything at all. The style,
 transitions, and animations are all determined by CSS. There are several
-examples in the [demo](http://athaeryn.github.io/flyLabel.js).
+examples in the [demo](http://space150.github.io/flyLabel.js).
 
 ## Get it
 
 You'll probably want to download the minified version in `dist/`.
 
-        $ curl -O https://raw.github.com/athaeryn/flyLabel.js/master/dist/flyLabel.min.js
+```sh
+$ curl -O https://raw.github.com/space150/flyLabel.js/master/dist/flyLabel.min.js
+```
 
 ## Use it
 
@@ -24,7 +26,7 @@ This snippet from the demo is pretty self-explanatory:
 <script src="/demo/vendor/jquery.min.js"></script>
 <script src="/dist/flyLabel.min.js"></script>
 <script>
-  if (Modernizr.input.placeholder) {
+  if (Modernizr.placeholder) {
     $('body').flyLabels();
   }
 </script>
@@ -40,6 +42,7 @@ now.
 
 These people were tremendously helpful in the creation of this plugin:
 
+- [athaeryn](https://github.com/athaeryn)
 - [audionerd](https://github.com/audionerd)
 - [wfendler](https://github.com/wfendler)
 - [mckennedy](https://github.com/mckennedy)
