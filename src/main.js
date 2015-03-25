@@ -42,17 +42,17 @@
         } else {
           this.label.addClass('is-active');
         }
-        ev.preventDefault();
+        ev && ev.preventDefault();
       },
       _onFocus: function (ev) {
         this.label.addClass('has-focus');
         this._onKeyUp();
-        ev.preventDefault();
+        ev && ev.preventDefault();
       },
       _onBlur: function (ev) {
         this.label.removeClass('has-focus');
         this._onKeyUp();
-        ev.preventDefault();
+        ev && ev.preventDefault();
       }
     };
     return _FlyLabel;
